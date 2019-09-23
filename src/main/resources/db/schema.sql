@@ -16,3 +16,9 @@ CREATE TABLE `user` (
 ALTER TABLE `user` ADD UNIQUE (`username`);
 ALTER TABLE `user` ADD UNIQUE (`email`);
 ALTER TABLE `user` ADD UNIQUE (`phone`);
+DROP TABLE IF EXISTS `blog`;
+CREATE TABLE `blog` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) DEFAULT NULL comment '用户名',
+  PRIMARY KEY (`id`)
+);
