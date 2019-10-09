@@ -20,5 +20,7 @@ DROP TABLE IF EXISTS `blog`;
 CREATE TABLE `blog` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) DEFAULT NULL comment '用户名',
+   `password` varchar(255) DEFAULT NULL,
+   `role` varchar(50) DEFAULT NULL comment '角色',
   PRIMARY KEY (`id`)
 );
