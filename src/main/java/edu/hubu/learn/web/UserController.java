@@ -40,4 +40,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
             mav.setViewName("users");
             return mav;
         }
+        @RequestMapping("/add")
+        public ModelAndView addUser() {
+            ModelAndView mav = new ModelAndView();
+            mav.setViewName("user_add");
+            return mav;
+        }
+        @RequestMapping("/do_add")
+        public ModelAndView doAddUser(User user) {
+            user.setAvatar("");
+        userService.addUser(user);
+            ModelAndView mav = new ModelAndView("redirect:/user/list");
+          
+            return mav;
+        }
     }

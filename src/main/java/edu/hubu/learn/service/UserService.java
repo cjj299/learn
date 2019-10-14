@@ -20,4 +20,9 @@ public class UserService {
     public List<User> getUsers(){
         return userDao.findAll();
     }
+	
+   
+    public User addUser(User user) {
+        return userDao.save(user);
+    }
 }

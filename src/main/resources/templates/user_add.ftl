@@ -1,4 +1,4 @@
-<html>
+ <html>
 <head> <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,6 +16,17 @@
     <![endif]-->
   </head>
 <body>
+<form action="/user/do_add">
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名">
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
+            </div>
+            <button type="submit" class="btn btn-default">确认</button>
+        </form>
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#">Home</a></li>
   <li role="presentation"><a href="#">Profile</a></li>
@@ -31,3 +42,4 @@
 </table>
 </body>
 </html>
+ 
