@@ -16,6 +16,12 @@
     <![endif]-->
   </head>
 <body>
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+</ul>
 <form action="/user/do_add">
             <div class="form-group">
                 <label for="username">用户名</label>
@@ -27,12 +33,6 @@
             </div>
             <button type="submit" class="btn btn-default">确认</button>
         </form>
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
-</ul>
-
 <table class="table table-striped">
 <#list users as users>
 <tr>
