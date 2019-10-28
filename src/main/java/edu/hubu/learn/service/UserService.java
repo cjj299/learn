@@ -24,10 +24,9 @@ public class UserService {
     public List<User> getUsers(){
         return userDao.findAll(new Sort(Direction.DESC,"id"));
     }
+
     public List<User> searchUsers(String keyword) {
         User user = new User();
-        user.setUsername("user");
-        ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("username", match->match.startsWith());
         user.setUsername(keyword);
         ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("username", match->match.contains());
         Example<User> example = Example.of(user, matcher);
